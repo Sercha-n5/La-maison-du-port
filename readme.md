@@ -186,3 +186,83 @@ Les gestionnaires et les chauffeurs peuvent manquer d'informations fiables, ce q
 
 
 
+
+
+\# matrice de droit
+
+&#x20;Liste des droits
+
+
+
+\- gérer les comptes utilisateurs
+
+\- gérer les droits d’accès
+
+\-  ajouter, modifier et supprimer des camions
+
+\-  consulter tous les trajets
+
+\-  planifier les trajets
+
+\-  affecter un camion et un chauffeur à une mission
+
+\-  vérifier la disponibilité des véhicules
+
+\-  consulter les affectations en cours
+
+\- consulter ses propres trajets
+
+\- consulter les infos du camion affecté
+
+\- consulter les horaires et les lieux de départ et d’arrivée
+
+\- signaler un problème pendant une mission
+
+\- modifier l’ordre de ses commandes du lendemain
+
+\-  modifier l’ordre des commandes des autres jours
+
+\- passer une commande
+
+\- suivre l’état de ses commandes
+
+
+
+Qui a quoi
+
+
+
+Droit	Admin	Gestionnaire	Chauffeur	Client
+
+D1	 v	  x                x              x
+
+D2	 v	  x	           x              x
+
+D3	 v	  x                x              x
+
+D4	 v        v                x              x
+
+D5	 x        v                x              x
+
+D6	 x        v                x              x
+
+D7	 v        v                x              x
+
+D8	 v        v                v              x
+
+D9	 x        x                v              x
+
+D10	 v        v                v              x
+
+D11	 v        v                v              v
+
+D12	 x        x                v              x
+
+D13      x        x                v              x
+
+D14	 x        x                x              x
+
+D15	 x        x                x              v
+
+D16      v        v                v              v
+
