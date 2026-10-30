@@ -1,0 +1,233 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="uml-livraison" name="Diagramme de classes">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1300" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Utilisateur -->
+        <mxCell id="u" value="Utilisateur" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="380" y="20" width="200" height="154" as="geometry"/>
+        </mxCell>
+        <mxCell id="u_a" value="- id : int&lt;br&gt;- nom : String&lt;br&gt;- email : String&lt;br&gt;- motDePasse : String&lt;br&gt;- role : Role" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="u">
+          <mxGeometry y="26" width="200" height="100" as="geometry"/>
+        </mxCell>
+        <mxCell id="u_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="u">
+          <mxGeometry y="126" width="200" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="u_m" value="+ sAuthentifier()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="u">
+          <mxGeometry y="134" width="200" height="20" as="geometry"/>
+        </mxCell>
+
+        <!-- Administrateur -->
+        <mxCell id="adm" value="Administrateur" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="20" y="260" width="200" height="114" as="geometry"/>
+        </mxCell>
+        <mxCell id="adm_a" value="- niveauAcces : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="adm">
+          <mxGeometry y="26" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="adm_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="adm">
+          <mxGeometry y="46" width="200" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="adm_m" value="+ gererComptes()&lt;br&gt;+ gererDroits()&lt;br&gt;+ gererCamions()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="adm">
+          <mxGeometry y="54" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Gestionnaire -->
+        <mxCell id="ges" value="Gestionnaire" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="260" y="260" width="200" height="134" as="geometry"/>
+        </mxCell>
+        <mxCell id="ges_a" value="- service : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ges">
+          <mxGeometry y="26" width="200" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="ges_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="ges">
+          <mxGeometry y="46" width="200" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="ges_m" value="+ planifierTrajet()&lt;br&gt;+ affecterCamion()&lt;br&gt;+ validerCreneau()&lt;br&gt;+ traiterReclamation()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="ges">
+          <mxGeometry y="54" width="200" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Chauffeur -->
+        <mxCell id="chf" value="Chauffeur" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="500" y="260" width="200" height="154" as="geometry"/>
+        </mxCell>
+        <mxCell id="chf_a" value="- numPermis : String&lt;br&gt;- disponible : boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="chf">
+          <mxGeometry y="26" width="200" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="chf_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="chf">
+          <mxGeometry y="66" width="200" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="chf_m" value="+ consulterLivraisons()&lt;br&gt;+ reordonnerLivraisons()&lt;br&gt;+ mettreAJourStatut()&lt;br&gt;+ enregistrerPreuve()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="chf">
+          <mxGeometry y="74" width="200" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Client -->
+        <mxCell id="cli" value="Client" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="740" y="260" width="200" height="154" as="geometry"/>
+        </mxCell>
+        <mxCell id="cli_a" value="- adresse : String&lt;br&gt;- telephone : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cli">
+          <mxGeometry y="26" width="200" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="cli_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="cli">
+          <mxGeometry y="66" width="200" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="cli_m" value="+ passerCommande()&lt;br&gt;+ choisirCreneau()&lt;br&gt;+ suivreLivraison()&lt;br&gt;+ signalerProbleme()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cli">
+          <mxGeometry y="74" width="200" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Commande -->
+        <mxCell id="cmd" value="Commande" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="740" y="515" width="200" height="126" as="geometry"/>
+        </mxCell>
+        <mxCell id="cmd_a" value="- id : int&lt;br&gt;- dateCommande : Date&lt;br&gt;- adresseLivraison : String&lt;br&gt;- poidsKg : float&lt;br&gt;- statut : String" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cmd">
+          <mxGeometry y="26" width="200" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- Livraison -->
+        <mxCell id="liv" value="Livraison" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="380" y="520" width="200" height="194" as="geometry"/>
+        </mxCell>
+        <mxCell id="liv_a" value="- id : int&lt;br&gt;- creneauDebut : DateTime&lt;br&gt;- creneauFin : DateTime&lt;br&gt;- statut : StatutLivraison&lt;br&gt;- ordreTournee : int&lt;br&gt;- dateLivraison : Date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="liv">
+          <mxGeometry y="26" width="200" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="liv_s" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="liv">
+          <mxGeometry y="146" width="200" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="liv_m" value="+ changerStatut()&lt;br&gt;+ reprogrammer()" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="liv">
+          <mxGeometry y="154" width="200" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Camion -->
+        <mxCell id="cam" value="Camion" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="20" y="554" width="200" height="126" as="geometry"/>
+        </mxCell>
+        <mxCell id="cam_a" value="- id : int&lt;br&gt;- immatriculation : String&lt;br&gt;- capaciteKg : float&lt;br&gt;- villeActuelle : String&lt;br&gt;- disponible : boolean" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="cam">
+          <mxGeometry y="26" width="200" height="100" as="geometry"/>
+        </mxCell>
+
+        <!-- PreuveLivraison -->
+        <mxCell id="prv" value="PreuveLivraison" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="380" y="790" width="200" height="106" as="geometry"/>
+        </mxCell>
+        <mxCell id="prv_a" value="- id : int&lt;br&gt;- signature : Image&lt;br&gt;- photo : Image&lt;br&gt;- dateHeure : DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="prv">
+          <mxGeometry y="26" width="200" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Reclamation -->
+        <mxCell id="rec" value="Reclamation" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="740" y="720" width="200" height="106" as="geometry"/>
+        </mxCell>
+        <mxCell id="rec_a" value="- id : int&lt;br&gt;- motif : String&lt;br&gt;- statut : String&lt;br&gt;- dateCreation : Date" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="rec">
+          <mxGeometry y="26" width="200" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Heritage -->
+        <mxCell id="h1" style="endArrow=block;endSize=16;endFill=0;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="adm" target="u">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="h2" style="endArrow=block;endSize=16;endFill=0;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="ges" target="u">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="h3" style="endArrow=block;endSize=16;endFill=0;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="chf" target="u">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="h4" style="endArrow=block;endSize=16;endFill=0;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="cli" target="u">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Client 1 - 0..* Commande : passe -->
+        <mxCell id="e1" value="passe" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="cli" target="cmd">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e1a" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e1">
+          <mxGeometry x="-0.85" relative="1" as="geometry"><mxPoint x="-12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="e1b" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e1">
+          <mxGeometry x="0.85" relative="1" as="geometry"><mxPoint x="-16" as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- Commande 1 - 0..* Livraison : donne lieu a -->
+        <mxCell id="e2" value="donne lieu à" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" edge="1" parent="1" source="cmd" target="liv">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2a" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e2">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint y="-10" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="e2b" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e2">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint y="-10" as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- Livraison * - 1 Camion : utilise -->
+        <mxCell id="e3" value="utilise" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="liv" target="cam">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3a" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e3">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint y="-10" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="e3b" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e3">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint y="-10" as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- Chauffeur 1 - 0..* Livraison : effectue -->
+        <mxCell id="e4" value="effectue" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.8;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="chf" target="liv">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4a" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e4">
+          <mxGeometry x="-0.85" relative="1" as="geometry"><mxPoint x="12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="e4b" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e4">
+          <mxGeometry x="0.85" relative="1" as="geometry"><mxPoint x="16" as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- Gestionnaire 1 - 0..* Livraison : planifie -->
+        <mxCell id="e5" value="planifie" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.2;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ges" target="liv">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5a" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e5">
+          <mxGeometry x="-0.85" relative="1" as="geometry"><mxPoint x="12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="e5b" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e5">
+          <mxGeometry x="0.85" relative="1" as="geometry"><mxPoint x="-16" as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- Livraison 1 - 0..1 PreuveLivraison : justifiee par -->
+        <mxCell id="e6" value="justifiée par" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;" edge="1" parent="1" source="liv" target="prv">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6a" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e6">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint x="12" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="e6b" value="0..1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e6">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint x="16" as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- Client 1 - 0..* Reclamation : depose -->
+        <mxCell id="e7" value="dépose" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="cli" target="rec">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1010" y="337"/>
+              <mxPoint x="1010" y="773"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e7a" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e7">
+          <mxGeometry x="-0.9" relative="1" as="geometry"><mxPoint y="-10" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="e7b" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e7">
+          <mxGeometry x="0.9" relative="1" as="geometry"><mxPoint y="-10" as="offset"/></mxGeometry>
+        </mxCell>
+
+        <!-- Reclamation 0..* - 1 Livraison : concerne -->
+        <mxCell id="e8" value="concerne" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.85;entryDx=0;entryDy=0;" edge="1" parent="1" source="rec" target="liv">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8a" value="0..*" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e8">
+          <mxGeometry x="-0.8" relative="1" as="geometry"><mxPoint y="-10" as="offset"/></mxGeometry>
+        </mxCell>
+        <mxCell id="e8b" value="1" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="e8">
+          <mxGeometry x="0.8" relative="1" as="geometry"><mxPoint y="-10" as="offset"/></mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
